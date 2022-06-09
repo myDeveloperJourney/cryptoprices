@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Higher Order Component AKA HOC
 
@@ -16,9 +16,9 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter> {/* HOC pattern */}
+    <Router> {/* HOC pattern */}
       <App /> 
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>
 );
 

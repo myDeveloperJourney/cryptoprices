@@ -22,11 +22,24 @@ function App() {
      <Route path="/currencies">
        <Currencies />
      </Route>
-     <Route path="/price/:symbol">
-       <Price />
-     </Route>
+     <Route path="/price/:symbol" render={(renderProps) => {
+       return <Price {...renderProps} />
+     }} />
     </div>
   );
 }
 
 export default App;
+
+
+   /*
+        {
+          history: {},
+          match: {
+            params: {
+              symbol: "DASH"
+            }
+          },
+          location: {}
+        }
+       */

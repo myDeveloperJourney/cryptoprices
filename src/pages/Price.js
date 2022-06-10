@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-const Price = (props) => {
+const Price = ({ match: { params: { symbol }}}) => {
     // set a local variable to hold our api key
     const apiKey = 'D5D3B1FE-C1E9-48ED-9353-3D5ED828E83B';
     // capture the coin symbol from route props
-    const symbol = 'where do we get this?'
+    // const symbol = match.params.symbol;
     // set a local variable for our dynamic API URL
     const url = `http://rest-sandbox.coinapi.io/v1/exchangerate/${symbol}/USD?apikey=${apiKey}`;
     // initialize state to hold our coin data once received from the API
@@ -27,6 +27,7 @@ const Price = (props) => {
         return (
             <div>
                 <h1>{coin.asset_id_base}/{coin.asset_id_quote}</h1>
+                <h2>{coin.rate}</h2>
             </div>
         );
     };

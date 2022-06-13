@@ -11,8 +11,12 @@ import { Route } from 'react-router-dom';
 
 // styles
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    console.log('hello')
+  }, [])
   return (
     <div className="App">
      <Nav />

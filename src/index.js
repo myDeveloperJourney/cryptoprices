@@ -13,14 +13,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // named imports are designed to allow for multiple imports from a single statement
 
+// <React.StrictMode>
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <Router> {/* HOC pattern */}
       <App /> 
     </Router>
-  </React.StrictMode>
 );
+{/* </React.StrictMode> */}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
